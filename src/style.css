@@ -1,4 +1,11 @@
 :root {
+  color-scheme: light dark;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: rgba(33, 53, 71, 1);
+}
+
+:root {
   --bg-color: #ffffff;
   --text-color: rgba(33, 53, 71, 1);
   --border-color: #d5d5d5;
@@ -26,12 +33,6 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  color: rgba(33, 53, 71, 1);
 }
 
 *,

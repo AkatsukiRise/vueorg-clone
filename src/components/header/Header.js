@@ -60,22 +60,25 @@ class Header extends HTMLElement {
       
         `
         document.addEventListener("DOMContentLoaded", () => {
-            const themeToggle = document.querySelector(".switch input");
-            if (localStorage.getItem("theme") === "dark" || (window.matchMedia("(prefers-color-scheme: dark)").matches)) { //return mediaQueryList
-                document.documentElement.classList.add("dark-theme")
-                themeToggle.checked = true
-            } else {
-                themeToggle.checked = false
+            const themeToggle = document.querySelector(".switch input")
+            const savedTheme = localStorage.getItem("theme")
+
+            if (savedTheme) {
+                document.documentElement.classList.add(savedTheme)
+                themeToggle.checked = savedTheme === "dark-theme"
+            }
+
+            const setTheme = (theme) => {
+                document.documentElement.classList.remove("light-theme", "dark-theme")
+                document.documentElement.classList.add(theme)
+                localStorage.setItem("theme", theme)
             }
 
             themeToggle.addEventListener("change", () => {
-                if (themeToggle.checked) {
-                    document.documentElement.classList.add("dark-theme")
-                } else {
-                    document.documentElement.classList.remove("dark-theme")
-                }
+                setTheme(themeToggle.checked ? "dark-theme" : "light-theme")
             })
         })
+
 
     }
 }
