@@ -10,7 +10,6 @@ class SiteMap extends HTMLElement {
 
         siteMapCategories.forEach(category => {
             let categoryLinks = category.links.map(link => `<li><a href="#">${link}</a></li>`).join('');
-            console.log(categoryLinks)
             allLinks += `
             <div class="category">
                 <h4>${category.title}</h4>

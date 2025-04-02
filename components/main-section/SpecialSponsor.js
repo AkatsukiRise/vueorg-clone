@@ -4,7 +4,7 @@ import {
 class SpecialSponsor extends HTMLElement {
     constructor() {
         super()
-        this.innerHTML = `
+        this.innerHTML = /*html*/ `
         <section class="special-sponsor">
             <span class="text text-container-left">
             Special Sponsor

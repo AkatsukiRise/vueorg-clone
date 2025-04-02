@@ -1,7 +1,7 @@
 class HeroSection extends HTMLElement {
     constructor() {
         super()
-        this.innerHTML = `
+        this.innerHTML = /*html*/ `
         <section class="hero">
             <h1>The <span class="highlight">Progressive</span> <br> JavaScript Framework</h1>
             <p class="hero-text">An approachable, performant and versatile framework for building web user interfaces.</p>

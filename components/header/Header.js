@@ -1,7 +1,7 @@
 class Header extends HTMLElement {
     constructor() {
         super()
-        this.innerHTML = `
+        this.innerHTML = /*html*/ `
         <header>
             <div class="header">
                 <div class="header-left">
@@ -23,7 +23,7 @@ class Header extends HTMLElement {
                                 <a href="#">Docs</a>
                                 <img class="nav-icon" src="./public/assets/icons/header-nav-arrow.svg" alt="Arrow">
                             </li>
-                            <li><a href="#">API</a></li>
+                            <li><a href="api.html">API</a></li>
                             <li><a href="#">Playground</a></li>
                             <li>
                                 <a href="#">Ecosystem</a>
