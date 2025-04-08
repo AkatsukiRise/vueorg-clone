@@ -10,7 +10,7 @@ class SpecialSponsor extends HTMLElement {
             Special Sponsor
             </span>
             <a href="https://www.monterail.com/services/vue-js-development?+utm_source=sponsorship&utm_medium=logo&utm_campaign=Vue">
-               <img class="image-container" src="./public/assets/icons/monterail.png" alt="Image">
+               <img class="image-container" src="./assets/icons/monterail.png" alt="Image">
             </a>
             <span class="text text-container-right">
             Official Vue & Nuxt Partner
