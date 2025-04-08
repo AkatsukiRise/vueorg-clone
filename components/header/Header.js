@@ -6,22 +6,22 @@ class Header extends HTMLElement {
         <div class="header">
             <div class="header-left">
                 <div class="header-logo">
-                    <img src="../../public/assets/icons/logo-vue.svg" alt="logo">
+                    <img src="./assets/icons/logo-vue.svg" alt="logo">
                     <span>Vue.js</span>
                 </div>
                 <button class="search-button">
-                    <img class="search-button-pic" src="../../public/assets/icons/header-search.svg" alt="search">
+                    <img class="search-button-pic" src="./assets/icons/header-search.svg" alt="search">
                     <span class="search-text">Search</span>
                     <div class="search-btn-shirtcut">⌘ K</div>
                 </button>
             </div>
-            <button class="menu-toggle-button"><img src="../../public/assets/icons/menu-btn.svg" alt="menu"></button>
+            <button class="menu-toggle-button"><img src="./assets/icons/menu-btn.svg" alt="menu"></button>
             <nav class="header-navigation">
                 <nav>
                     <ul class="nav-menu">
                         <li class="dropdown">
                             <a href="#">Docs</a>
-                            <img class="nav-icon" src="../../public/assets/icons/header-nav-arrow.svg" alt="Arrow">
+                            <img class="nav-icon" src="./assets/icons/header-nav-arrow.svg" alt="Arrow">
                             <ul class="dropdown-menu">
                                 <li><a href="#">Guide</a></li>
                                 <li><a href="#">Tutorial</a></li>
@@ -33,12 +33,11 @@ class Header extends HTMLElement {
                                 <li><a href="#">Migration from Vue 2</a></li>
                             </ul>
                         </li>
-    
                         <li><a href="#">API</a></li>
                         <li><a href="#">Playground</a></li>
                         <li class="dropdown">
                             <a href="#">Ecosystem</a>
-                            <img class="nav-icon" src="../../public/assets/icons/header-nav-arrow.svg" alt="Arrow">
+                            <img class="nav-icon" src="./assets/icons/header-nav-arrow.svg" alt="Arrow">
                             <ul class="dropdown-menu">
                                         <li>RESOURCES</li>
                                         <li><a href="#">Partners</a></li>
@@ -76,7 +75,7 @@ class Header extends HTMLElement {
                         </li>
                         <li class="dropdown">
                             <a href="#">About</a>
-                            <img class="nav-icon" src="../../public/assets/icons/header-nav-arrow.svg" alt="Arrow">
+                            <img class="nav-icon" src="./assets/icons/header-nav-arrow.svg" alt="Arrow">
                             <ul class="dropdown-menu">
                                 <li><a href="#">FAQ</a></li>
                                 <li><a href="#">Team</a></li>
@@ -94,7 +93,7 @@ class Header extends HTMLElement {
                         <li class="dropdown">
                             <a href="#">Experts</a>
                             <span class="new-p">NEW</span>
-                            <img class="nav-icon" src="../../public/assets/icons/header-nav-arrow.svg" alt="Arrow">
+                            <img class="nav-icon" src="./assets/icons/header-nav-arrow.svg" alt="Arrow">
                             <ul class="dropdown-menu">
                                 <li><a href="#">Partners</a></li>
                                 <li><a href="#">Developers</a></li>
@@ -104,18 +103,20 @@ class Header extends HTMLElement {
                 </nav>
                 
                 <div class="dropdown">
+
                     <button class="header-translation-btn">
-                        <img src="../../public/assets/icons/header-translate.svg" alt="translate">
+                        <img src="./assets/icons/header-translate.svg" alt="translate">
                     </button>
+
                 
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#">Italiano</a>
-                            <img src="../../public/assets/icons/header-github.svg" alt="github">
+                            <img src="./assets/icons/header-github.svg" alt="github">
                         </li>
                         <li>
                             <a href="#">English</a>
-                            <img src="../../public/assets/icons/header-github.svg" alt="github">
+                            <img src="./assets/icons/header-github.svg" alt="github">
                         </li>
                         <li>Help us translate!</li>
                     </ul>
@@ -126,12 +127,12 @@ class Header extends HTMLElement {
                     <span class="slider round"></span>
                 </label>
                 <div class="buttons">
-                    <button class="header-btns"> <img src="../../public/assets/icons/header-github.svg" alt="github"></button>
-                    <button class="header-btns"> <img src="../../public/assets/icons/header-twitter.svg" alt="twitter"></button>
-                    <button class="header-btns"> <img src="../../public/assets/icons/header-discord.svg" alt="discord"></button>
+                    <button class="header-btns"> <img src="./assets/icons/header-github.svg" alt="github"></button>
+                    <button class="header-btns"> <img src="./assets/icons/header-twitter.svg" alt="twitter"></button>
+                    <button class="header-btns"> <img src="./assets/icons/header-discord.svg" alt="discord"></button>
                 </div>
                 <button class="menu-dots-btn">
-                    <img src="../../public/assets/icons/header-menu-dots.svg" alt="menu dots">
+                    <img src="./assets/icons/header-menu-dots.svg" alt="menu dots">
                 </button>
             </nav>
         </div>
@@ -233,18 +234,16 @@ class Header extends HTMLElement {
                         </li>
                     </ul>
                 </nav>
-
-
             <div class="popup-bg">
                 <span>Translations</span>
                 <ul class="translation-list">
                     <li>
                         <a href="#">Italiano</a>
-                        <img src="../../public/assets/icons/header-github.svg" alt="github">
+                        <img src="./assets/icons/header-github.svg" alt="github">
                     </li>
                     <li>
                         <a href="#">English</a>
-                        <img src="../../public/assets/icons/header-github.svg" alt="github">
+                        <img src="./assets/icons/header-github.svg" alt="github">
                     </li>
                     
                 </ul>
@@ -259,13 +258,13 @@ class Header extends HTMLElement {
             </div>
             <div class="buttons">
                 <button class="header-btns">
-                    <img src="../../public/assets/icons/header-github.svg" alt="github">
+                    <img src="./assets/icons/header-github.svg" alt="github">
                 </button>
                 <button class="header-btns">
-                    <img src="../../public/assets/icons/header-twitter.svg" alt="twitter">
+                    <img src="./assets/icons/header-twitter.svg" alt="twitter">
                 </button>
                 <button class="header-btns">
-                    <img src="../../public/assets/icons/header-discord.svg" alt="discord">
+                    <img src="./assets/icons/header-discord.svg" alt="discord">
                 </button>
             </div>
 

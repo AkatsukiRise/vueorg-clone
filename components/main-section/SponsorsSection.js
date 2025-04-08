@@ -1,7 +1,7 @@
 import {
     platinumSponsors,
     goldSponsors
-} from "../../data";
+} from "../../data.js";
 
 class Sponsors extends HTMLElement {
     constructor() {

@@ -7,16 +7,16 @@ class HeroSection extends HTMLElement {
             <p class="hero-text">An approachable, performant and versatile framework for building web user interfaces.</p>
             <div class="hero-buttons">
                 <button class="btn btn-green">
-                    <img src="../../public/assets/icons/whyVue-btn.svg" alt="play button icon">
+                    <img src="./assets/icons/whyVue-btn.svg" alt="play button icon">
                     Why Vue
                 </button>
                 <button class="btn btn-icon-right">
                     Get Started
-                    <img src="../../public/assets/icons/getStarted-btn.svg" alt="get started button icon" class="btn-icon-arrow">
+                    <img src="./assets/icons/getStarted-btn.svg" alt="get started button icon" class="btn-icon-arrow">
                 </button>
                 <button class="btn">Install</button>
                 <button class="btn btn-gradient">Get Security Updates for Vue2
-                <img src="../../public/assets/icons/link-btn.svg" alt="link icon" class="btn-icon-link">
+                <img src="./assets/icons/link-btn.svg" alt="link icon" class="btn-icon-link">
                 </button>
             </div>
         </section>

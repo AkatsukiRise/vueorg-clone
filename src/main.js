@@ -1,10 +1,10 @@
-import './style.css'
-import "../components/header/Header"
-import "../components/main-section/HeroSection"
-import "../components/main-section/SpecialSponsor"
-import "../components/main-section/SponsorsSection"
-import "../components/main-section/SiteMap"
-import "../components/footer/Footer"
+import "../components/header/Header.js";
+import "../components/main-section/HeroSection.js";
+import "../components/main-section/SpecialSponsor.js";
+import "../components/main-section/SponsorsSection.js";
+import "../components/main-section/SiteMap.js";
+import "../components/footer/Footer.js";
+
 
 document.querySelector("#app").innerHTML = `
   <header-section></header-section>
