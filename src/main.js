@@ -1,9 +1,9 @@
-import "../components/header/Header.js";
-import "../components/main-section/HeroSection.js";
-import "../components/main-section/SpecialSponsor.js";
-import "../components/main-section/SponsorsSection.js";
-import "../components/main-section/SiteMap.js";
-import "../components/footer/Footer.js";
+import "../src/components/header/Header.js";
+import "../src/components/main-section/HeroSection.js";
+import "../src/components/main-section/SpecialSponsor.js";
+import "../src/components/main-section/SponsorsSection.js";
+import "../src/components/main-section/SiteMap.js";
+import "../src/components/footer/Footer.js";
 
 
 document.querySelector("#app").innerHTML = `
