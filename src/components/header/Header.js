@@ -44,10 +44,11 @@ class Header extends HTMLElement {
                     <button class="header-translation-btn">
                         <img src="./assets/icons/header-translate.svg" alt="translate">
                     </button>
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                    </label>
+                    <select id="theme-select">
+                        <option id="theme-system" value="system">System</option>
+                        <option id="theme-light" value="light">Light</option>
+                        <option id="theme-dark" value="dark">Dark</option>
+                    </select>
                     <div class="buttons">
                         <button class="header-btns"> <img src="./assets/icons/header-github.svg" alt="github"></button>
                         <button class="header-btns"> <img src="./assets/icons/header-twitter.svg" alt="twitter"></button>
@@ -60,23 +61,15 @@ class Header extends HTMLElement {
       
         `
         document.addEventListener("DOMContentLoaded", () => {
-            const themeToggle = document.querySelector(".switch input")
-            const savedTheme = localStorage.getItem("theme")
-
+            const themeSelect = document.querySelector('header-section select#theme-select');
+            const savedTheme = localStorage.getItem('preferred-theme');
             if (savedTheme) {
-                document.documentElement.classList.add(savedTheme)
-                themeToggle.checked = savedTheme === "dark-theme"
+                themeSelect.value = savedTheme;
             }
 
-            const setTheme = (theme) => {
-                document.documentElement.classList.remove("light-theme", "dark-theme")
-                document.documentElement.classList.add(theme)
-                localStorage.setItem("theme", theme)
-            }
-
-            themeToggle.addEventListener("change", () => {
-                setTheme(themeToggle.checked ? "dark-theme" : "light-theme")
-            })
+            themeSelect.addEventListener('change', () => {
+                localStorage.setItem('preferred-theme', themeSelect.value);
+            });
         })
 
 
