@@ -1,3 +1,4 @@
+import i18next from "i18next";
 class Header extends HTMLElement {
     constructor() {
         super()
@@ -59,6 +60,27 @@ class Header extends HTMLElement {
       </header>
       
         `
+        document.querySelector('.header-translation-btn').addEventListener('click', () => {
+            let newLang = i18next.language === 'en' ? 'it' : 'en'
+            i18next.changeLanguage(newLang)
+            this.updateSearchText()
+            this.updateNavMenu();
+        })
+    }
+    updateSearchText() {
+        this.querySelector('.search-text').textContent = i18next.t('searchText');
+    }
+
+    updateNavMenu() {
+        const navItems = this.querySelectorAll('.nav-menu li a');
+        navItems[0].textContent = i18next.t('nav.docs');
+        navItems[1].textContent = i18next.t('nav.api');
+        navItems[2].textContent = i18next.t('nav.playground');
+        navItems[3].textContent = i18next.t('nav.ecosystem');
+        navItems[4].textContent = i18next.t('nav.about');
+        navItems[5].textContent = i18next.t('nav.sponsor');
+        navItems[6].textContent = i18next.t('nav.experts');
+
     }
 }
 customElements.define("header-section", Header)
