@@ -25,7 +25,7 @@ class Header extends HTMLElement {
                                 <img class="nav-icon" src="./assets/icons/header-nav-arrow.svg" alt="Arrow">
                             </li>
                             <li><a href="#">API</a></li>
-                            <li><a href="#">Playground</a></li>
+                            <li><a href="playground.html">Playground</a></li>
                             <li>
                                 <a href="#">Ecosystem</a>
                                 <img class="nav-icon" src="./assets/icons/header-nav-arrow.svg" alt="Arrow">
