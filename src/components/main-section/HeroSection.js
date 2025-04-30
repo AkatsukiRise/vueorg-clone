@@ -9,17 +9,17 @@ class HeroSection extends HTMLElement {
             <p class="hero-text">${i18next.t('heroText')}</p>
             <div class="hero-buttons">
                 <button class="btn btn-green">
-                    <img src="./public/assets/icons/whyVue-btn.svg" alt="play button icon">
+                    <img src="./assets/icons/whyVue-btn.svg" alt="play button icon">
                     ${i18next.t('whyVue')}
                 </button>
                 <button class="btn btn-icon-right">
                     ${i18next.t('getStarted')}
-                    <img src="./public/assets/icons/getStarted-btn.svg" alt="get started button icon" class="btn-icon-arrow">
+                    <img src="./assets/icons/getStarted-btn.svg" alt="get started button icon" class="btn-icon-arrow">
                 </button>
                 <button class="btn">${i18next.t('install')}</button>
                 <button class="btn btn-gradient">
                     ${i18next.t('getSecurityUpdates')}
-                    <img src="./public/assets/icons/link-btn.svg" alt="link icon" class="btn-icon-link">
+                    <img src="./assets/icons/link-btn.svg" alt="link icon" class="btn-icon-link">
                 </button>
             </div>
         </section>
