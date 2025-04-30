@@ -38,7 +38,7 @@ class HeroSection extends HTMLElement {
                 </button>
             </div>
         </section>
-        `
+        `;
 
         i18next.on('languageChanged', () => {
             this.updateText()
