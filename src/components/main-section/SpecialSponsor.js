@@ -20,7 +20,7 @@ class SpecialSponsor extends HTMLElement {
                 ${i18next.t('specialSponsor')}
             </span>
             <a href="https://www.monterail.com/services/vue-js-development?+utm_source=sponsorship&utm_medium=logo&utm_campaign=Vue">
-               <img class="image-container" src="./assets/icons/monterail.png" alt="Image">
+               <img class="image-container" src="https://automation.vuejs.org/images/monterail.svg" alt="Image">
             </a>
             <span class="text text-container-right">
                 ${i18next.t('officialPartner')}

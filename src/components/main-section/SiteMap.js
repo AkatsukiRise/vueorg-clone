@@ -17,6 +17,8 @@ class SiteMap extends HTMLElement {
         let allLinks = '';
 
         siteMapCategories.forEach(category => {
+
+
             const categoryKey = category.id;
             let categoryLinks = category.links.map(link => {
                 return `<li><a href="#">${i18next.t(`siteMap.${categoryKey}.${link.key}`)}</a></li>`;
