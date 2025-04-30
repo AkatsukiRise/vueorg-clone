@@ -9,11 +9,8 @@ class Api extends HTMLElement {
         `
 
         async function fetchData() {
-
             const listStatus = document.querySelector(".list-status")
-
             listStatus.textContent = "List is loading... we are waiting"
-
             try {
                 const response = await fetch('https://jsonplaceholder.typicode.com/users')
                 if (!response.ok) {
