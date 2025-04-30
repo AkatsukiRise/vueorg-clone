@@ -47,6 +47,8 @@ button {
 }
 
 .header {
+  width: min(100%, 1500px);
+  margin: 0 auto;
   padding: 10px 32px;
   display: flex;
   justify-content: space-between;
@@ -314,7 +316,7 @@ h3 {
 .hero-text {
   margin: 20px auto 40px;
   font-size: clamp(16px, 2vw, 22px);
-  max-width: 960px;
+  width: min(90%, 960px);
   word-break: normal;
   text-align: center;
 }
@@ -432,9 +434,8 @@ h3 {
   justify-content: space-between;
   gap: 20px;
   margin: 0 auto;
-  width: 90%;
   padding: 42px 32px;
-  max-width: 960px;
+  width: min(90%, 960px);
 }
 
 .char-p {
@@ -446,9 +447,8 @@ h3 {
 }
 
 .table-container {
-  width: 90%;
+  width: min(90%, 900px);
   margin: 0 auto;
-  max-width: 900px;
   padding: 42px 32px;
 }
 
@@ -505,7 +505,7 @@ h3 {
 }
 
 .map-links {
-  max-width: 900px;
+  width: min(100%, 900px);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -559,6 +559,78 @@ footer a:hover {
   display: none;
   background: none;
   border: none;
+}
+
+.chat {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 40%;
+  margin: 2rem auto;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.chat-title {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.chat-messages {
+  height: 200px;
+  overflow-y: auto;
+  background: #fff;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.chat-message {
+  margin-bottom: 0.3rem;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+
+}
+
+.chat-message.me {
+  color: blue;
+  align-self: flex-end;
+  background-color: #7fa5ff;
+}
+
+.chat-message.server {
+  align-self: flex-start;
+  color: rgb(0, 0, 0);
+  background-color: #4885ff86;
+}
+
+.chat-message.center {
+  align-self: center;
+  color: black;
+}
+
+.chat-inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.chat-send {
+  padding: 0.4rem 1rem;
+  border: none;
+  background: #0a5200;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

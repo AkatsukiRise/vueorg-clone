@@ -1,12 +1,15 @@
 export const characteristics = [{
+        id: 'accessible',
         title: "Approachable",
         description: "Builds on top of standard HTML, CSS and JavaScript with intuitive API and world-class documentation."
     },
     {
+        id: 'performant',
         title: "Performant",
         description: "Truly reactive, compiler-optimized rendering system that rarely requires manual optimization."
     },
     {
+        id: 'versatile',
         title: "Versatile",
         description: "A rich, incrementally adoptable ecosystem that scales between a library and a full-featured framework."
     }
@@ -47,79 +50,143 @@ export const goldSponsors = [
 ];
 
 export const siteMapCategories = [{
-        title: "Docs",
-        links: [
-            "Guide",
-            "Tutorial",
-            "Examples",
-            "Quick Start",
-            "Glossary",
-            "Error Reference",
-            "Vue 2 Docs",
-            "Migration from Vue 2"
+        id: "docs",
+        links: [{
+                key: "guide"
+            },
+            {
+                key: "tutorial"
+            },
+            {
+                key: "examples"
+            },
+            {
+                key: "quick_start"
+            },
+            {
+                key: "glossary"
+            },
+            {
+                key: "error_reference"
+            },
+            {
+                key: "vue_2_docs"
+            },
+            {
+                key: "migration_from_vue_2"
+            }
         ]
     },
     {
-        title: "About",
-        links: [
-            "FAQ",
-            "Team",
-            "Releases",
-            "Community Guide",
-            "Code of Conduct",
-            "Privacy Policy",
-            "The Documentary"
+        id: "about",
+        links: [{
+                key: "faq"
+            },
+            {
+                key: "team"
+            },
+            {
+                key: "releases"
+            },
+            {
+                key: "community_guide"
+            },
+            {
+                key: "code_of_conduct"
+            },
+            {
+                key: "privacy_policy"
+            },
+            {
+                key: "the_documentary"
+            }
         ]
     },
     {
-        title: "Experts",
-        links: [
-            "Partners",
-            "Developers"
+        id: "experts",
+        links: [{
+                key: "partners"
+            },
+            {
+                key: "developers"
+            }
         ]
     },
     {
-        title: "Resources",
-        links: [
-            "Partners",
-            "Developers",
-            "Themes",
-            "UI Components",
-            "Certification",
-            "Jobs",
-            "T-Shirt Shop"
+        id: "resources",
+        links: [{
+                key: "partners"
+            },
+            {
+                key: "developers"
+            },
+            {
+                key: "themes"
+            },
+            {
+                key: "ui_components"
+            },
+            {
+                key: "certification"
+            },
+            {
+                key: "jobs"
+            },
+            {
+                key: "t_shirt_shop"
+            }
         ]
     },
     {
-        title: "Official Libraries",
-        links: [
-            "Vue Router",
-            "Pinia",
-            "Tooling Guide"
+        id: "officiallibraries",
+        links: [{
+                key: "vue_router"
+            },
+            {
+                key: "pinia"
+            },
+            {
+                key: "tooling_guide"
+            }
         ]
     },
     {
-        title: "Video Courses",
-        links: [
-            "Vue Mastery",
-            "Vue School"
+        id: "videocourses",
+        links: [{
+                key: "vue_mastery"
+            },
+            {
+                key: "vue_school"
+            }
         ]
     },
     {
-        title: "Help",
-        links: [
-            "Discord Chat",
-            "GitHub Discussions",
-            "DEV Community"
+        id: "help",
+        links: [{
+                key: "discord_chat"
+            },
+            {
+                key: "github_discussions"
+            },
+            {
+                key: "dev_community"
+            }
         ]
     },
     {
-        title: "News",
-        links: [
-            "Blog",
-            "Twitter",
-            "Events",
-            "Newsletters"
+        id: "news",
+        links: [{
+                key: "blog"
+            },
+            {
+                key: "twitter"
+            },
+            {
+                key: "events"
+            },
+            {
+                key: "newsletters"
+            }
         ]
     }
 ];
