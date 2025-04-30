@@ -42,6 +42,12 @@ body {
   box-sizing: border-box;
 }
 
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 button {
   cursor: pointer;
 }
@@ -313,6 +319,7 @@ h3 {
   padding: 96px 32px;
 }
 
+
 .hero-text {
   margin: 20px auto 40px;
   font-size: clamp(16px, 2vw, 22px);
@@ -353,7 +360,7 @@ h3 {
   background-color: #42B883;
   color: #fff;
   margin-right: 18px;
-  padding: 8px 1em 8px 3em;
+  padding: 8px 1em;
 }
 
 .btn-green:hover {
@@ -370,10 +377,6 @@ h3 {
 
 .dark-theme .btn-green {
   color: #213547;
-}
-
-.dark-theme .btn-green svg path {
-  fill: #213547;
 }
 
 .btn-gradient {
@@ -547,6 +550,38 @@ h3 {
   color: #8f8f8f;
   font-weight: 400;
   font-size: 14px;
+}
+
+
+.list-container {
+  width: 80%;
+  margin: 5rem auto;
+}
+
+.list-status {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.user {
+  padding: 15px;
+  min-width: 10%;
+  background-color: #eeeeee;
+  color: #333;
+  flex-shrink: 1;
+  flex-basis: 280px;
+}
+
+footer-section {
+  margin-top: auto;
 }
 
 .footer-content {

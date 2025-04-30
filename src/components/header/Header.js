@@ -2,7 +2,7 @@ import i18next from "i18next";
 class Header extends HTMLElement {
     constructor() {
         super()
-        this.innerHTML = `
+        this.innerHTML = /*html*/ `
         <header>
             <div class="header">
                 <div class="header-left">
@@ -24,7 +24,7 @@ class Header extends HTMLElement {
                                 <a href="#">Docs</a>
                                 <img class="nav-icon" src="./assets/icons/header-nav-arrow.svg" alt="Arrow">
                             </li>
-                            <li><a href="#">API</a></li>
+                            <li><a href="api.html">API</a></li>
                             <li><a href="playground.html">Playground</a></li>
                             <li>
                                 <a href="#">Ecosystem</a>
@@ -75,6 +75,7 @@ class Header extends HTMLElement {
             themeToggle.addEventListener("change", () => {
                 if (themeToggle.checked) {
                     document.documentElement.classList.add("dark-theme")
+                    localStorage.setItem("theme", "dark")
                 } else {
                     document.documentElement.classList.remove("dark-theme")
                 }
