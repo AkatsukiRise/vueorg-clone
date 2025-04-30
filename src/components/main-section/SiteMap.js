@@ -1,25 +1,38 @@
 import {
     siteMapCategories
-} from '../../data.js'
+} from '../../data.js';
+import i18next from 'i18next';
 
 class SiteMap extends HTMLElement {
     constructor() {
-        super()
+        super();
+        this.render();
 
-        let allLinks = ''
+        i18next.on('languageChanged', () => {
+            this.updateText();
+        });
+    }
+
+    render() {
+        let allLinks = '';
 
         siteMapCategories.forEach(category => {
-            let categoryLinks = category.links.map(link => `<li><a href="#">${link}</a></li>`).join('')
-            console.log(categoryLinks)
+
+
+            const categoryKey = category.id;
+            let categoryLinks = category.links.map(link => {
+                return `<li><a href="#">${i18next.t(`siteMap.${categoryKey}.${link.key}`)}</a></li>`;
+            }).join('');
+
             allLinks += `
             <div class="category">
-                <h4>${category.title}</h4>
+                <h4>${i18next.t(`siteMap.${categoryKey}.title`)}</h4>
                 <ul>
                     ${categoryLinks}
                 </ul>
             </div>
-            `
-        })
+            `;
+        });
 
         this.innerHTML = `
         <nav class="map">
@@ -29,18 +42,20 @@ class SiteMap extends HTMLElement {
         </nav>
         `;
     }
+
+    updateText() {
+        const categories = this.querySelectorAll('.category')
+
+        siteMapCategories.forEach((category, index) => {
+            const categoryKey = category.id
+            categories[index].querySelector('h4').textContent = i18next.t(`siteMap.${categoryKey}.title`);
+
+            const links = categories[index].querySelectorAll('li a');
+            category.links.forEach((link, linkIndex) => {
+                links[linkIndex].textContent = i18next.t(`siteMap.${categoryKey}.${link.key}`);
+            });
+        });
+    }
 }
-//{
-//     title: "Docs",
-//     links: [
-//         "Guide",
-//         "Tutorial",
-//         "Examples",
-//         "Quick Start",
-//         "Glossary",
-//         "Error Reference",
-//         "Vue 2 Docs",
-//         "Migration from Vue 2"
-//     ]
-// }
-customElements.define("site-map", SiteMap)
+
+customElements.define("site-map", SiteMap);
