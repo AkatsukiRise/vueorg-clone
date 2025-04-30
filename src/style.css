@@ -46,16 +46,13 @@ button {
   cursor: pointer;
 }
 
-header {
-  border-bottom: 1px solid var(--border-color);
-}
-
 .header {
   width: min(100%, 1500px);
   margin: 0 auto;
   padding: 10px 32px;
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .header-left {
@@ -573,6 +570,78 @@ footer a:hover {
   display: none;
   background: none;
   border: none;
+}
+
+.chat {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 40%;
+  margin: 2rem auto;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.chat-title {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.chat-messages {
+  height: 200px;
+  overflow-y: auto;
+  background: #fff;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.chat-message {
+  margin-bottom: 0.3rem;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+
+}
+
+.chat-message.me {
+  color: blue;
+  align-self: flex-end;
+  background-color: #7fa5ff;
+}
+
+.chat-message.server {
+  align-self: flex-start;
+  color: rgb(0, 0, 0);
+  background-color: #4885ff86;
+}
+
+.chat-message.center {
+  align-self: center;
+  color: black;
+}
+
+.chat-inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.chat-send {
+  padding: 0.4rem 1rem;
+  border: none;
+  background: #0a5200;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

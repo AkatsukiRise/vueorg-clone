@@ -1,3 +1,4 @@
+import i18next from "i18next";
 class Header extends HTMLElement {
     constructor() {
         super()
@@ -10,7 +11,7 @@ class Header extends HTMLElement {
                         <span>Vue.js</span>
                     </div>
                     <button class="search-button">
-                        <img src="./public/assets/icons/header-search.svg" alt="search">
+                        <img class="search-button-pic" src="./assets/icons/header-search.svg" alt="search">
                         <span class="search-text">Search</span>
                         <div class="search-btn-shortcut">⌘ K</div>
                     </button>
@@ -24,7 +25,7 @@ class Header extends HTMLElement {
                                 <img class="nav-icon" src="./assets/icons/header-nav-arrow.svg" alt="Arrow">
                             </li>
                             <li><a href="#">API</a></li>
-                            <li><a href="#">Playground</a></li>
+                            <li><a href="playground.html">Playground</a></li>
                             <li>
                                 <a href="#">Ecosystem</a>
                                 <img class="nav-icon" src="./assets/icons/header-nav-arrow.svg" alt="Arrow">
@@ -61,6 +62,7 @@ class Header extends HTMLElement {
       </header>
       
         `
+
         document.addEventListener("DOMContentLoaded", () => {
             const themeToggle = document.querySelector(".switch input");
             if (localStorage.getItem("theme") === "dark" || (window.matchMedia("(prefers-color-scheme: dark)").matches)) { //return mediaQueryList
@@ -78,6 +80,27 @@ class Header extends HTMLElement {
                 }
             })
         })
+
+        document.querySelector('.header-translation-btn').addEventListener('click', () => {
+            let newLang = i18next.language === 'en' ? 'it' : 'en'
+            i18next.changeLanguage(newLang)
+            this.updateSearchText()
+            this.updateNavMenu();
+        })
+    }
+    updateSearchText() {
+        this.querySelector('.search-text').textContent = i18next.t('searchText');
+    }
+
+    updateNavMenu() {
+        const navItems = this.querySelectorAll('.nav-menu li a');
+        navItems[0].textContent = i18next.t('nav.docs');
+        navItems[1].textContent = i18next.t('nav.api');
+        navItems[2].textContent = i18next.t('nav.playground');
+        navItems[3].textContent = i18next.t('nav.ecosystem');
+        navItems[4].textContent = i18next.t('nav.about');
+        navItems[5].textContent = i18next.t('nav.sponsor');
+        navItems[6].textContent = i18next.t('nav.experts');
 
     }
 }
